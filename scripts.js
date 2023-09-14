@@ -1,4 +1,4 @@
-const MAX_NUMBER = 15;
+const MAX_NUMBER = 10;
 const MIN_NUMBER = -5;
 const STEP_AMOUNT = 1;
 
@@ -6,6 +6,7 @@ const STEP_AMOUNT = 1;
 const number = document.querySelector('[data-key="number"]');
 const subtract = document.querySelector('[data-key="subtract"]');
 const add = document.querySelector('[data-key="add"]');
+const reset = document.querySelector('[data-key="reset"]');
 
 const subtractHandler = () => {
     const newValue =parseInt(number.value) - STEP_AMOUNT;
@@ -34,5 +35,14 @@ const addHandler = () => {
 
 };
 
+const resetHandler = () => {
+  let newValue = 0; 
+  number.value = newValue;
+  subtract.disabled = false; 
+  add.disabled = false;
+};
+
+
 subtract.addEventListener('click', subtractHandler);
 add.addEventListener('click', addHandler);
+reset.addEventListener('click' , resetHandler);

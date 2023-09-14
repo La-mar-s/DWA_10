@@ -12,6 +12,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.8.0/cdn/themes/light.css" />
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.8.0/cdn/shoelace-autoloader.js"></script>
+
+
         <script src="scripts.js" defer></script>
         
     </head>
@@ -31,9 +35,11 @@
 
             <div class="counter_actions">
 
-                <button data-key="subtract" class="counter_button counter_button_first">-</button>
+                <sl-button data-key="subtract" class="counter_button counter_button_first">-</sl-button>
 
-                <button data-key="add" class="counter_button">+</button>
+                <sl-button data-key="add" class="counter_button counter_button_first">+</sl-button>
+
+                <sl-button data-key="reset" class="counter_button">Reset</sl-button>
 
             </div>
 
